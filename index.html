@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css"
+    />
+
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 data-cursor-text="Welcome" data-cursor-stick>Hi, Welcome</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam odit
+        laborum molestias illum quas commodi? Reiciendis iure recusandae ex
+        obcaecati magnam odio repellat est quis, molestias delectus sit optio.
+        Quaerat enim sed quisquam modi ratione placeat repellendus numquam culpa
+        magnam.
+      </p>
+
+      <div
+        class="show-image"
+        data-cursor-img="https://cdn.pixabay.com/photo/2022/07/22/18/50/helenium-7338764_1280.jpg"
+      >
+        Hover me to show image!
+      </div>
+    </div>
+
+    <script>
+      const cursor = new MouseFollower({
+        el: null,
+        container: document.body,
+        className: "mf-cursor",
+        innerClassName: "mf-cursor-inner",
+        textClassName: "mf-cursor-text",
+        mediaClassName: "mf-cursor-media",
+        mediaBoxClassName: "mf-cursor-media-box",
+        iconSvgClassName: "mf-svgsprite",
+        iconSvgNamePrefix: "-",
+        iconSvgSrc: "",
+        dataAttr: "cursor",
+        hiddenState: "-hidden",
+        textState: "-text",
+        iconState: "-icon",
+        activeState: "-active",
+        mediaState: "-media",
+        stateDetection: {
+          "-pointer": "a,button",
+          "-hidden": "iframe",
+        },
+        visible: true,
+        visibleOnState: false,
+        speed: 0.55,
+        ease: "expo.out",
+        overwrite: true,
+        skewing: 0,
+        skewingText: 0,
+        skewingIcon: 2,
+        skewingMedia: 2,
+        skewingDelta: 0.001,
+        skewingDeltaMax: 0.15,
+        stickDelta: 0.15,
+        showTimeout: 20,
+        hideOnLeave: true,
+        hideTimeout: 300,
+        hideMediaTimeout: 300,
+      });
+    </script>
+  </body>
+</html>

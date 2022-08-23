@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.container {
+  width: 700px;
+  margin-inline: auto;
+  padding-top: 50px;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 900;
+  margin: 0;
+  display: inline-block;
+}
+
+p {
+  line-height: 2;
+}
+
+.show-image {
+  font-size: 30px;
+  display: inline-block;
+}
